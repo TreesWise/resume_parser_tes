@@ -23,11 +23,11 @@ OPENAI_API_VERSION = os.getenv("OPENAI_API_VERSION")
 
 
 # Set Tesseract path (Only needed for Windows)
-pytesseract.pytesseract.tesseract_cmd = r"C:\Users\alwin.antony\AppData\Local\Programs\Tesseract-OCR\tesseract.exe"  # Update this path
-os.environ["TESSDATA_PREFIX"] = r"C:\Users\alwin.antony\AppData\Local\Programs\Tesseract-OCR\tessdata"
+pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"  # Update this path
+os.environ["TESSDATA_PREFIX"] = "/usr/share/tesseract-ocr/4.00/tessdata"
 def extract_text_from_scanned_pdf(pdf_path):
     """Extracts text from a scanned PDF using Tesseract OCR."""
-    images = convert_from_path(pdf_path, poppler_path=r"C:\Users\alwin.antony\Downloads\Release-24.08.0-0\poppler-24.08.0\Library\bin")  # Convert PDF pages to images
+    images = convert_from_path(pdf_path, poppler_path="/usr/bin")  # Convert PDF pages to images
     text = ""
     for img in images:
         text += pytesseract.image_to_string(img, lang="eng") + "\n"  # OCR on each page
