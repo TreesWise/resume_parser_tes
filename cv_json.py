@@ -131,7 +131,7 @@ prompt = f"""You are an expert in data extraction and JSON formatting. Your task
 """
 
 
-async def convert_docx_to_pdf(docx_path):
+async def doc_to_pdf(docx_path):
     """ Converts DOCX to PDF using LibreOffice (Linux) or Microsoft Word (Windows). """
     pdf_path = docx_path.replace(".docx", ".pdf")
 
