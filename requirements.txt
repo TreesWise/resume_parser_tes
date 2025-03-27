@@ -225,7 +225,7 @@ Spire.Doc==13.1.0
 SQLAlchemy
 sqlalchemy-migrate==0.13.0
 sqlparse==0.5.3
-srsly==1.0.7
+srsly
 starlette==0.45.3
 strictyaml==1.7.3
 sympy==1.13.1
