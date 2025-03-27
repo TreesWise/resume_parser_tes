@@ -9,6 +9,9 @@ from fastapi import HTTPException
 from docx2pdf import convert
 import tempfile
 from openai import AzureOpenAI
+import platform
+import subprocess
+import asyncio
 
 
 load_dotenv()
