@@ -44,7 +44,7 @@ async def upload_file(
 
         if temp_file_path.endswith(".docx"):
             print("Converting DOCX to PDF...")
-            converted_pdf_path = doc_to_pdf(temp_file_path)  # Convert DOCX to PDF
+            converted_pdf_path = await doc_to_pdf(temp_file_path)  # Convert DOCX to PDF
             temp_file_path = converted_pdf_path
 
         extracted_text = extract_text_from_scanned_pdf(temp_file_path)
